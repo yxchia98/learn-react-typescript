@@ -5,6 +5,7 @@ import { Action } from "../actions";
 
 export const searchRepositories = (term: string) => {
     return async (dispatch: Dispatch<Action>) => {
+        // dispatch this action to let redux know that it is currently searching, and to update the loading indicator
         dispatch({
             type: ActionType.SEARCH_REPOSITORIES,
         });
